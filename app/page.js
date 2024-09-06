@@ -5,6 +5,8 @@ import Container from "./components/Container";
 import QuizCard from "./components/QuizCard";
 import QuizStatistics from "./components/QuizStatistics";
 import DoughnutChart from "./components/DoughnutChart";
+import SkillWise from "./components/SkillWise";
+import ComparisonGraph from "./components/ComparisonGraph";
 
 export default function Home() {
   const [rank, setRank] = useState(1);
@@ -26,10 +28,12 @@ export default function Home() {
           <div className="lg:col-span-3 space-y-6">
             <QuizCard rank={rank} onRender={onRender} percentile={percentile} currentScore={currentScore} />
             <QuizStatistics rank={rank} percentile={percentile} currentScore={currentScore} />
+            <ComparisonGraph percentile={percentile} />
           </div>
 
           {/* Right section with 1/3 width */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 space-y-6">
+            <SkillWise />
             <DoughnutChart correctAnswers={currentScore} totalQuestions={15} />
           </div>
         </div>
