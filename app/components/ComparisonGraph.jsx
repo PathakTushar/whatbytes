@@ -40,7 +40,7 @@ const ComparisonGraph = ({ percentile = 90, averagePercentile = 72 }) => {
                     userPercentileLabel: {
                         type: 'label',
                         xValue: percentile,
-                        yValue: 90,
+                        yValue: 85,
                         content: [`Your Percentile:`, `${percentile}%`],
                         backgroundColor: `${percentile >= averagePercentile ? "rgba(92, 214, 92, 0.8)" : "rgba(255, 99, 132, 0.8)"}`,
                         color: 'white',
@@ -60,7 +60,7 @@ const ComparisonGraph = ({ percentile = 90, averagePercentile = 72 }) => {
                     averagePercentileLabel: {
                         type: 'label',
                         xValue: averagePercentile,
-                        yValue: 90,
+                        yValue: 85,
                         content: [`Average:`, `${averagePercentile}%`],
                         backgroundColor: 'rgba(54, 162, 235, 0.8)',
                         color: 'white',
